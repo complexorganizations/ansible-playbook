@@ -2,11 +2,11 @@
 - name: ufw
   hosts: localhost
   tasks:
-  - name: Ensure ufw is at the latest version
+  - name: Install the latest version of ufw package
     package:
       name: ufw
       state: latest
-  - name: Ensure ufw is running
+  - name: Ensure the ufw package is running
     service:
       name: ufw
       state: started
