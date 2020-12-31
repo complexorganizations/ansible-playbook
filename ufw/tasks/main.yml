@@ -5,8 +5,9 @@
   - name: Install the latest version of ufw package
     package:
       name: ufw
-      state: latest
+      state: present
   - name: Ensure the ufw package is running
     service:
       name: ufw
+      enabled: yes
       state: started
