@@ -5,33 +5,6 @@
 - World largest collection of ansible playbooks
 
 ---
-### Q&A
-
-How
-- 
-- 
-- 
-- 
-
-Which
-- 
-- 
-- 
--
-
-Is
-- 
-- 
-- 
--
-
-How 
-- 
-- 
-- 
--
-
----
 ### Author
 
 * Name: Prajwal Koirala
