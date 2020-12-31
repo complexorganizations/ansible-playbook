@@ -23,5 +23,20 @@ galaxy_info:
    - name: Kali
      versions:
      - all
+   - name: CentOS
+     versions:
+     - all
+   - name: Fedora
+     versions:
+     - all
+   - name: Rhel
+     versions:
+     - all
+   - name: Arch
+     versions:
+     - all
+   - name: Manjaro
+     versions:
+     - all
   galaxy_tags: []
 dependencies: []
