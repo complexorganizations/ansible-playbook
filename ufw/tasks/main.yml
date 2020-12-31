@@ -3,33 +3,7 @@
   hosts: localhost
   tasks:
   - name: Ensure ufw is at the latest version
-    apt:
-      name: ufw
-      state: latest
-  - name: Ensure ufw is running
-    service:
-      name: ufw
-      state: started
-
----
-- name: ufw
-  hosts: localhost
-  tasks:
-  - name: Ensure ufw is at the latest version
-    yum:
-      name: ufw
-      state: latest
-  - name: Ensure ufw is running
-    service:
-      name: ufw
-      state: started
-
----
-- name: ufw
-  hosts: localhost
-  tasks:
-  - name: Ensure ufw is at the latest version
-    pacman:
+    package:
       name: ufw
       state: latest
   - name: Ensure ufw is running
