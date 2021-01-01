@@ -1,0 +1,13 @@
+---
+- name: firefox
+  hosts: localhost
+  tasks:
+  - name: Install the latest version of firefox package
+    package:
+      name: firefox
+      state: present
+  - name: Ensure the firefox package is running
+    service:
+      name: firefox
+      enabled: yes
+      state: started

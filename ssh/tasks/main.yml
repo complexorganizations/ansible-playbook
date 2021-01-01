@@ -1,0 +1,13 @@
+---
+- name: openssh-client
+  hosts: localhost
+  tasks:
+  - name: Install the latest version of openssh-client package
+    package:
+      name: openssh-client
+      state: present
+  - name: Ensure the openssh-client package is running
+    service:
+      name: openssh-client
+      enabled: yes
+      state: started

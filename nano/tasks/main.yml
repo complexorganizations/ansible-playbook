@@ -1,0 +1,13 @@
+---
+- name: nano
+  hosts: localhost
+  tasks:
+  - name: Install the latest version of nano package
+    package:
+      name: nano
+      state: present
+  - name: Ensure the nano package is running
+    service:
+      name: nano
+      enabled: yes
+      state: started

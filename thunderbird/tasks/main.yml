@@ -1,0 +1,13 @@
+---
+- name: thunderbird
+  hosts: localhost
+  tasks:
+  - name: Install the latest version of thunderbird package
+    package:
+      name: thunderbird
+      state: present
+  - name: Ensure the thunderbird package is running
+    service:
+      name: thunderbird
+      enabled: yes
+      state: started

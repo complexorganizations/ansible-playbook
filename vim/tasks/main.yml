@@ -1,0 +1,13 @@
+---
+- name: vim
+  hosts: localhost
+  tasks:
+  - name: Install the latest version of vim package
+    package:
+      name: vim
+      state: present
+  - name: Ensure the vim package is running
+    service:
+      name: vim
+      enabled: yes
+      state: started
