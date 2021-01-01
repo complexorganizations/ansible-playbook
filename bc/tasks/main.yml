@@ -1,0 +1,13 @@
+---
+- name: bc
+  hosts: localhost
+  tasks:
+  - name: Install the latest version of bc package
+    package:
+      name: bc
+      state: present
+  - name: Ensure the bc package is running
+    service:
+      name: bc
+      enabled: yes
+      state: started

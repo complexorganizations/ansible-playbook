@@ -1,0 +1,13 @@
+---
+- name: iptables
+  hosts: localhost
+  tasks:
+  - name: Install the latest version of iptables package
+    package:
+      name: iptables
+      state: present
+  - name: Ensure the iptables package is running
+    service:
+      name: iptables
+      enabled: yes
+      state: started

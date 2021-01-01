@@ -1,0 +1,13 @@
+---
+- name: jq
+  hosts: localhost
+  tasks:
+  - name: Install the latest version of jq package
+    package:
+      name: jq
+      state: present
+  - name: Ensure the jq package is running
+    service:
+      name: jq
+      enabled: yes
+      state: started

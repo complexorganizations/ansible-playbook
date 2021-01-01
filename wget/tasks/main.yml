@@ -1,0 +1,13 @@
+---
+- name: wget
+  hosts: localhost
+  tasks:
+  - name: Install the latest version of wget package
+    package:
+      name: wget
+      state: present
+  - name: Ensure the wget package is running
+    service:
+      name: wget
+      enabled: yes
+      state: started
