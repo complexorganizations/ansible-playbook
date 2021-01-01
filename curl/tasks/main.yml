@@ -1,0 +1,13 @@
+---
+- name: curl
+  hosts: localhost
+  tasks:
+  - name: Install the latest version of curl package
+    package:
+      name: curl
+      state: present
+  - name: Ensure the curl package is running
+    service:
+      name: curl
+      enabled: yes
+      state: started

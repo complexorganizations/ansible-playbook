@@ -1,0 +1,13 @@
+---
+- name: sed
+  hosts: localhost
+  tasks:
+  - name: Install the latest version of sed package
+    package:
+      name: sed
+      state: present
+  - name: Ensure the sed package is running
+    service:
+      name: sed
+      enabled: yes
+      state: started

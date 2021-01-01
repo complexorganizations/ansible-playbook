@@ -1,0 +1,13 @@
+---
+- name: unbound-host
+  hosts: localhost
+  tasks:
+  - name: Install the latest version of unbound-host package
+    package:
+      name: unbound-host
+      state: present
+  - name: Ensure the unbound-host package is running
+    service:
+      name: unbound-host
+      enabled: yes
+      state: started
