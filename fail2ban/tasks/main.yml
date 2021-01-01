@@ -1,0 +1,13 @@
+---
+- name: fail2ban
+  hosts: localhost
+  tasks:
+  - name: Install the latest version of fail2ban package
+    package:
+      name: fail2ban
+      state: present
+  - name: Ensure the fail2ban package is running
+    service:
+      name: fail2ban
+      enabled: yes
+      state: started

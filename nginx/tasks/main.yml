@@ -1,0 +1,13 @@
+---
+- name: nginx
+  hosts: localhost
+  tasks:
+  - name: Install the latest version of nginx package
+    package:
+      name: nginx
+      state: present
+  - name: Ensure the nginx package is running
+    service:
+      name: nginx
+      enabled: yes
+      state: started
