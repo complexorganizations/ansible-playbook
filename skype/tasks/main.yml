@@ -1,0 +1,13 @@
+---
+- name: skype
+  hosts: localhost
+  tasks:
+  - name: Install the latest version of skype package
+    package:
+      name: skype
+      state: present
+  - name: Ensure the skype package is running
+    service:
+      name: skype
+      enabled: yes
+      state: started

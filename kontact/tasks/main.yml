@@ -1,0 +1,13 @@
+---
+- name: kontact
+  hosts: localhost
+  tasks:
+  - name: Install the latest version of kontact package
+    package:
+      name: kontact
+      state: present
+  - name: Ensure the kontact package is running
+    service:
+      name: kontact
+      enabled: yes
+      state: started

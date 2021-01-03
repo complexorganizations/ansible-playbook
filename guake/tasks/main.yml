@@ -1,0 +1,13 @@
+---
+- name: guake
+  hosts: localhost
+  tasks:
+  - name: Install the latest version of guake package
+    package:
+      name: guake
+      state: present
+  - name: Ensure the guake package is running
+    service:
+      name: guake
+      enabled: yes
+      state: started

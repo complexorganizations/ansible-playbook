@@ -1,0 +1,13 @@
+---
+- name: netfilter
+  hosts: localhost
+  tasks:
+  - name: Install the latest version of netfilter package
+    package:
+      name: netfilter
+      state: present
+  - name: Ensure the netfilter package is running
+    service:
+      name: netfilter
+      enabled: yes
+      state: started

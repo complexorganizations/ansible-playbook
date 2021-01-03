@@ -1,0 +1,13 @@
+---
+- name: pidgin
+  hosts: localhost
+  tasks:
+  - name: Install the latest version of pidgin package
+    package:
+      name: pidgin
+      state: present
+  - name: Ensure the pidgin package is running
+    service:
+      name: pidgin
+      enabled: yes
+      state: started

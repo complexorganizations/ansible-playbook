@@ -1,0 +1,13 @@
+---
+- name: konversation
+  hosts: localhost
+  tasks:
+  - name: Install the latest version of konversation package
+    package:
+      name: konversation
+      state: present
+  - name: Ensure the konversation package is running
+    service:
+      name: konversation
+      enabled: yes
+      state: started

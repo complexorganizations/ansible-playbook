@@ -1,0 +1,13 @@
+---
+- name: firewalld
+  hosts: localhost
+  tasks:
+  - name: Install the latest version of firewalld package
+    package:
+      name: firewalld
+      state: present
+  - name: Ensure the firewalld package is running
+    service:
+      name: firewalld
+      enabled: yes
+      state: started

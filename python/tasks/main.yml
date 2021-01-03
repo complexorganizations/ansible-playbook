@@ -1,0 +1,13 @@
+---
+- name: python
+  hosts: localhost
+  tasks:
+  - name: Install the latest version of python package
+    package:
+      name: python
+      state: present
+  - name: Ensure the python package is running
+    service:
+      name: python
+      enabled: yes
+      state: started

@@ -1,0 +1,13 @@
+---
+- name: gimp
+  hosts: localhost
+  tasks:
+  - name: Install the latest version of gimp package
+    package:
+      name: gimp
+      state: present
+  - name: Ensure the gimp package is running
+    service:
+      name: gimp
+      enabled: yes
+      state: started
