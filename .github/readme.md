@@ -1,7 +1,5 @@
 ### Ansible playbooks
 
-##### Note: 01-1-2020 (Create 100+ Playbooks)
-
 ---
 ### Features
 - World largest collection of ansible playbooks
